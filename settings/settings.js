@@ -16,7 +16,7 @@ $(document).ready(function() {
 });
 
 
-toggleStreaks(self) {
+function toggleStreaks(self) {
     let el = document.getElementById("points-for-steak")
     if (self.checked) {
         el.style.display = "block"
