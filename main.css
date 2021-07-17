@@ -67,6 +67,11 @@ label {
     font-size: 24px;
     vertical-align: middle;
     cursor:pointer;
+
+    margin-left: -40px;
+    padding-left: 40px;
+    z-index: 2;
+    position: relative;
 }
 
 .container {
@@ -214,6 +219,10 @@ img {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+}
+
+h3 {
+    color: lightgray;
 }
 
 .number{
