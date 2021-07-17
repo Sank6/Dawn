@@ -10,6 +10,7 @@ function toggleActivity(self, points){
 
 function edit(id) {
     let label = findLableForControl(document.getElementById(id));
+    console.log(label, label.childNodes, label.children)
     let span = label.childNodes[2];
     if (span.contentEditable == "true") {
         span.contentEditable = "false";

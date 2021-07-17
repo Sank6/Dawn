@@ -79,7 +79,7 @@ label {
     font-size: 24px;
     vertical-align: middle;
     cursor: pointer;
-    z-index: 4;
+    z-index: 3;
     position: relative;
     outline: none;
 }
