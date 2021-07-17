@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
         '/main.css',
         '/calendar/index.html',
         '/settings/index.html',
-        '/assets/streaks,png',
+        '/assets/streaks.png',
         '/assets/settings.png',
         '/assets/right.png',
         '/assets/left.png',
