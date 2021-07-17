@@ -100,7 +100,7 @@ function loadClickHandlers() {
             if (date.getTime() > d.getTime()) {
                 return;
             } else {
-                document.getElementById("selected-date").innerText = date.toLocaleDateString())
+                document.getElementById("selected-date").innerText = date.toLocaleDateString();
                 let tasks = document.getElementsByClassName("tasks");
                 for (let task of tasks) {
                     task.checked = Math.random() < 0.75;
