@@ -253,6 +253,7 @@ input[type="text"] {
     background-color: #686464;
     border-radius: 10px;
     padding-bottom: 15px;
+    width: calc(100% - 20px);
 }
 
 .xs-icon img {
