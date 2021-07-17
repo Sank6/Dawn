@@ -12,10 +12,12 @@ function edit(id) {
     let label = findLableForControl(document.getElementById(id));
     if (label.contentEditable == "true") {
         label.contentEditable = "false";
+        label.onclick = () => {return true;}
         label.classList.remove("editable")
     } else {
         label.contentEditable = "true";
         label.focus()
+        label.onclick = () => {return false;}
         label.classList.add("editable")
     }
 }
