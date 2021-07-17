@@ -216,10 +216,6 @@ img {
     transform: translateX(26px);
 }
 
-span {
-    cursor:pointer;
-}
-
 .number{
     position: relative;
     float: right;
