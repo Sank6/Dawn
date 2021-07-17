@@ -31,13 +31,12 @@ function loadCalendarPage(month, year) {
     if (firstDate != 0) {
         let lastYear = d.getFullYear() - (d.getMonth() == 0 ? 1 : 0)
         let daysInLastMonth = daysInMonth((12+(d.getMonth()-1)) % 12, lastYear)
-        console.log(firstDate)
         for (let i=0; i < firstDate; i++) {
-            console.log("ok")
             let el = document.createElement("div")
             el.classList.add("day", "disabled")
             if (new Date(lastYear, (12+(d.getMonth()-1)) % 12, i).getTime() < d.getTime()) {
                 el.style.backgroundColor = `rgb(255, ${parseInt(Math.random()*255)}, 0)`
+                el.classList.add("future")
             }
             el.innerText = daysInLastMonth - firstDate + i
             calendar.appendChild(el)
@@ -45,10 +44,9 @@ function loadCalendarPage(month, year) {
     }
 
     for (let i=0; i < daysInThisMonth; i++) {
-        console.log("ok2")
         let el = document.createElement("div")
         el.classList.add("day")
-        if (new Date(d.getYear(), d.getMonth(), i).getTime() < d.getTime()) {
+        if (new Date(d.getFullYear(), d.getMonth(), i).getTime() < d.getTime()) {
             el.style.backgroundColor = `rgb(255, ${parseInt(Math.random()*255)}, 0)`
         }
         el.innerText = i
@@ -59,7 +57,6 @@ function loadCalendarPage(month, year) {
     let daysInNextMonth = daysInMonth((12+(d.getMonth()+1)) % 12, nextYear)
     let daysInNextMonthToAdd = 7*5 - daysInThisMonth - firstDate
     for (let i=0; i < daysInNextMonthToAdd; i++) {
-        console.log("ok3")
         let el = document.createElement("div")
         el.classList.add("day")
         if (new Date(nextYear, (12+(d.getMonth()+1)) % 12, i).getTime() > d.getTime()) {
@@ -68,7 +65,7 @@ function loadCalendarPage(month, year) {
             el.classList.add("disabled")
             el.style.backgroundColor = `rgb(255, ${parseInt(Math.random()*255)}, 0)`
         }
-        el.innerText = daysInLastMonth - firstDate + i
+        el.innerText = i
         calendar.appendChild(el)
     }
 }
