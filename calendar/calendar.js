@@ -15,7 +15,7 @@ onLoad()
 function onLoad() {
     
     let monthName =  monthNames[d.getMonth()]
-    let el = document.getElementById("month-name")
+    var el = document.getElementById("month-name")
     el.innerText = monthName + " " + d.getFullYear()
 
     let calendar = document.getElementById("calendar-section")
