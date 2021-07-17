@@ -20,7 +20,7 @@
     <h1>Home</h1>
     <img src="/assets/chill-vibes.png">
     <h1>Check off your day!</h1>
-    <h3>You have earnt <span id="current-points" class="streak">5</span> points so far</h3>
+    <h3>You have earnt <span id="current-points" class="streak">0</span> points so far</h3>
     <div class="checklist">
         <div class="container">
             <input type="checkbox" name="sample-1" id="sample-1" value="sample-1" class="task" onclick="toggleActivity(this, 10)">           
@@ -33,7 +33,7 @@
             <img class="edit" src="/assets/edit.png" onclick="edit('sample-1', this)">
         </div>
         <div class="container">
-            <input type="checkbox" name="sample-2" id="sample-2" value="sample-2" class="task" checked onclick="toggleActivity(this, 5)">
+            <input type="checkbox" name="sample-2" id="sample-2" value="sample-2" class="task" onclick="toggleActivity(this, 5)">
             <label for="sample-2">
                 <div class="checkbox">
                     <span class="points">+5</span>
@@ -94,6 +94,19 @@
             <img class="edit" src="/assets/edit.png" onclick="edit('sample-6', this)">
         </div>
     </div>
+
+
+    <br>
+
+    <h2 style="color: white;">Add a new activity:</h2>
+    <div>
+        <p style="font-family: 'Roboto'; font-weight: 600; color: lightgray;">Points: <input type="number"></p>
+        <p style="font-family: 'Roboto'; font-weight: 600; color: lightgray;">Message: <input type="text"></p>
+        <button onclick="addActivity(this)">Add</button>
+    </div>
+
+    <br>
+    <br>
 
     <div id="menubar">
         <div>

@@ -66,3 +66,19 @@ function setEndOfContenteditable(contentEditableElement) {
         range.select();//Select the range (make it the visible selection
     }
 }
+
+function addActivity(self) {
+    let points = self.parentElement.firstElementChild.firstElementChild.value
+    let message = self.parentElement.children[1].firstElementChild.value
+
+    if (points == null || points < 0 || message == "") {
+        return;
+    }
+
+    renderActivity(points, message)
+}
+
+function renderActivity(points, message) {
+    console.log(points)
+    console.log(message)
+}
