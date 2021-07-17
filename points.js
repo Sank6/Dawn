@@ -12,7 +12,7 @@ function edit(id, elem) {
     let label = findLableForControl(document.getElementById(id));
     let span = label.childNodes[3];
     if (span.contentEditable == "true") {
-        if (span.innerText = "") {
+        if (span.innerText == "") {
             span.parentElement.parentElement.remove()
         }
         span.contentEditable = "false";
@@ -27,7 +27,7 @@ function edit(id, elem) {
         span.classList.add("editable")
         span.onkeydown = (e) => {
             if (e.keyCode == 13) {
-                if (span.innerText = "") {
+                if (span.innerText == "") {
                     span.parentElement.parentElement.remove()
                 }
                 span.contentEditable = "false";
