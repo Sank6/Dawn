@@ -35,6 +35,10 @@ function edit(id, elem) {
         document.addEventListener('click', function(event) {
             if (!span.contains(event.target) && !elem.contains(event.target)) 
                 span.innerText = initialText;
+                span.contentEditable = "false";
+                span.onclick = () => { return true; }
+                span.classList.remove("editable")
+                elem.src = "/assets/edit.png"
         });
 
         elem.src = "/assets/tick.png"
