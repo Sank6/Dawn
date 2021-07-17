@@ -4,7 +4,7 @@ body {
     background-color: #24293C;
     color: white;
     font-family: 'Roboto', sans-serif;
-    margin: 60px 0 0 22px;
+    margin: 60px 0 65px 22px;
     max-height: 896px;
     width: 414px;
     overflow-x: hidden;
@@ -41,6 +41,12 @@ h2 {
     border: 3px solid #FFF170;
     box-sizing: border-box;
     cursor:pointer;
+}
+
+.past {
+    border: 0;
+    background-color: #ED683C;
+    color: #E9E9E9;
 }
 
 input[type="checkbox"]:checked ~ .checkbox {
@@ -84,6 +90,10 @@ img {
 .checklist {
     max-height: 350px;
     overflow-y: auto;
+}
+
+.small {
+    max-height: 180px;
 }
 
 #menubar {
