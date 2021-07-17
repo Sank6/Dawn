@@ -10,18 +10,19 @@ function toggleActivity(self, points){
 
 function edit(id) {
     let label = findLableForControl(document.getElementById(id));
-    if (label.contentEditable == "true") {
-        label.contentEditable = "false";
-        label.onclick = () => {return true;}
-        label.classList.remove("editable")
+    let span = label.childNodes[1];
+    if (span.contentEditable == "true") {
+        span.contentEditable = "false";
+        span.onclick = () => {return true;}
+        span.classList.remove("editable")
     } else {
-        label.contentEditable = "true";
-        label.focus()
-        let text = label.innerText;
-        label.innerText = "";
-        label.innerText = text;
-        label.onclick = () => {return false;}
-        label.classList.add("editable")
+        span.contentEditable = "true";
+        span.focus()
+        let text = span.innerText;
+        span.innerText = "";
+        span.innerText = text;
+        span.onclick = () => {return false;}
+        span.classList.add("editable")
     }
 }
 
