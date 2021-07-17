@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-    border: 5px white solid;
     background-color: #24293C;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -106,6 +105,7 @@ img {
     height: 50px;
     left: calc(50%-197px);
     bottom: 0;
+    box-shadow: 0 -10px 10px #24293C;
 }
 
 .settings {
@@ -130,7 +130,7 @@ img {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.current-icon {
+.current-icon img {
     transform: translate(0, -10px) scale(1.1);
 }
 

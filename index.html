@@ -24,23 +24,21 @@
     <h3>You have earnt <span id="current-points" class="streak">0</span> so far</h3>
     <div class="checklist">
         <div class="container">
-            <input type="checkbox" name="sample-1" id="sample-1" value="sample-1" class="task">
+            <input type="checkbox" name="sample-1" id="sample-1" value="sample-1" class="task" onclick="toggleActivity(this, 10)">
             <div class="checkbox">
                 <span class="points">+10</span>
             </div>
             <label for="sample-1">Get out of bed</label>
         </div>
         <div class="container">
-            <input type="checkbox" name="sample-2" id="sample-2" value="sample-2" class="task" checked>
-            <label for="sample-2">
-                <div class="checkbox">
-                    <span class="points">+5</span>
-                </div>
-                Make bed
-            </label>
+            <input type="checkbox" name="sample-2" id="sample-2" value="sample-2" class="task" checked onclick="toggleActivity(this, 5)">
+            <div class="checkbox">
+                <span class="points">+5</span>
+            </div>
+            <label for="sample-2">Make bed</label>
         </div>
         <div class="container">
-            <input type="checkbox" name="sample-3" id="sample-3" value="sample-3" class="task">
+            <input type="checkbox" name="sample-3" id="sample-3" value="sample-3" class="task" onclick="toggleActivity(this, 10)">
             <div class="checkbox">
                 <span class="points">+10</span>
             </div>
@@ -48,21 +46,21 @@
             <br>
         </div>
         <div class="container">
-            <input type="checkbox" name="sample-4" id="sample-4" value="sample-4" class="task">
+            <input type="checkbox" name="sample-4" id="sample-4" value="sample-4" class="task" onclick="toggleActivity(this, 15)">
             <div class="checkbox">
-                <span class="points">+10</span>
+                <span class="points">+15</span>
             </div>
             <label for="sample-4">Shower</label>
         </div>
         <div>
-            <input type="checkbox" name="sample-5" id="sample-5" value="sample-5" class="task">
+            <input type="checkbox" name="sample-5" id="sample-5" value="sample-5" class="task" onclick="toggleActivity(this, 10)">
             <div class="checkbox">
                 <span class="points">+10</span>
             </div>
             <label for="sample-5">Have breakfast</label>
         </div>
         <div class="container">
-            <input type="checkbox" name="sample-6" id="sample-6" value="sample-6" class="task">
+            <input type="checkbox" name="sample-6" id="sample-6" value="sample-6" class="task" onclick="toggleActivity(this, 10)">
             <div class="checkbox">
                 <span class="points">+10</span>
             </div>
