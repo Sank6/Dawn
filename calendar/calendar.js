@@ -51,14 +51,14 @@ function loadCalendarPage(month, year) {
         let daysInLastMonth = daysInMonth((12+(calendarMonth-1)) % 12, lastYear)
         for (let i=0; i < firstDate; i++) {
             let el = document.createElement("div")
-            el.id = new Date(lastYear, (12+(calendarMonth-1)) % 12, daysInLastMonth - firstDate + i).getTime()
+            el.id = new Date(lastYear, (12+(calendarMonth-1)) % 12, daysInLastMonth - firstDate + i+1).getTime()
             el.classList.add("day", "disabled")
-            if (new Date(lastYear, (12+(calendarMonth-1)) % 12, daysInLastMonth - firstDate + i).getTime() < d.getTime()) {
+            if (new Date(lastYear, (12+(calendarMonth-1)) % 12, daysInLastMonth - firstDate + i+1).getTime() < d.getTime()) {
                 el.style.backgroundColor = `rgba(255, ${parseInt(Math.random()*255)}, 0, 0.3)`
             } else {
                 el.classList.add("future")
             }
-            el.innerText = daysInLastMonth - firstDate + i
+            el.innerText = daysInLastMonth - firstDate + i + 1
             calendar.appendChild(el)
         }
     }
@@ -79,9 +79,9 @@ function loadCalendarPage(month, year) {
     let daysInNextMonthToAdd = 7*5 - daysInThisMonth - firstDate
     for (let i=0; i < daysInNextMonthToAdd; i++) {
         let el = document.createElement("div")
-        el.id = new Date(nextYear, (12+(calendarMonth+1)) % 12, i).getTime()
+        el.id = new Date(nextYear, (12+(calendarMonth+1)) % 12, i+1).getTime()
         el.classList.add("day")
-        if (new Date(nextYear, (12+(calendarMonth+1)) % 12, i).getTime() > d.getTime()) {
+        if (new Date(nextYear, (12+(calendarMonth+1)) % 12, i+1).getTime() > d.getTime()) {
             el.classList.add("future")
         } else {
             el.classList.add("disabled")
