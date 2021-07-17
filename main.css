@@ -63,12 +63,12 @@ h2 {
     color: #E9E9E9;
 }
 
-input[type="checkbox"]:checked ~ .checkbox {
+input[type="checkbox"]:checked ~ .label > .checkbox {
     background-color: #37DE65;
     border: 0;
 }
 
-input[type="checkbox"]:checked ~ .checkbox .points {
+input[type="checkbox"]:checked ~ .label > .checkbox .points {
     color: #202D2F !important;
     border: 0;
 }
