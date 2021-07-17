@@ -44,10 +44,12 @@
         </div>
         <div class="container">
             <input type="checkbox" name="sample-3" id="sample-3" value="sample-3" class="task" onclick="toggleActivity(this, 10)">
-            <div class="checkbox">
-                <span class="points">+10</span>
-            </div>
-            <label for="sample-3">Brush teeth</label>
+            <label for="sample-3">
+                <div class="checkbox">
+                    <span class="points">+10</span>
+                </div>
+                <span>Brush teeth</span>
+            </label>
             <img class="edit" src="/assets/edit.png" onclick="edit('sample-3', this)">
             <br>
         </div>
@@ -56,7 +58,12 @@
             <div class="checkbox">
                 <span class="points">+15</span>
             </div>
-            <label for="sample-4" contenteditable="false">Shower</label>
+            <label for="sample-4">
+                <div class="checkbox">
+                    <span class="points">+15</span>
+                </div>
+                <span>Shower</span>
+            </label>
             <img class="edit" src="/assets/edit.png" onclick="edit('sample-4', this)">
         </div>
         <div>
