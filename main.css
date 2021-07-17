@@ -139,6 +139,10 @@ img {
     vertical-align: middle;
 }
 
+.settings-page {
+    width: calc(100% - 25px)
+}
+
 .notifications {
     background-image: url("assets/notifications.png");
 }
