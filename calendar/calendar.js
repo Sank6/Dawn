@@ -76,7 +76,7 @@ function loadCalendarPage(month, year) {
 
     let nextYear = calendarYear + (calendarMonth == 11 ? 1 : 0)
     let daysInNextMonth = daysInMonth((12+(calendarMonth+1)) % 12, nextYear)
-    let daysInNextMonthToAdd = 7*5 - daysInThisMonth - firstDate
+    let daysInNextMonthToAdd = 7*6 - daysInThisMonth - firstDate
     for (let i=0; i < daysInNextMonthToAdd; i++) {
         let el = document.createElement("div")
         el.id = new Date(nextYear, (12+(calendarMonth+1)) % 12, i+1).getTime()
