@@ -22,7 +22,7 @@ function onPageLoad() {
 
 function scrollForwardMonth() {
     calendarMonth = (12+(calendarMonth+1)) % 12
-    calendarYear = calendarYear + (calendarMonth == 11 ? 1 : 0)
+    calendarYear = calendarYear + (calendarMonth == 0 ? 1 : 0)
     loadCalendarPage(calendarMonth, calendarYear)
 }
 
