@@ -71,7 +71,7 @@ function addActivity(self) {
     let points = self.parentElement.firstElementChild.firstElementChild.value
     let message = self.parentElement.children[1].firstElementChild.value
 
-    if (points == null || points < 0 || message == "") {
+    if (points == "" || points < 0 || message == "") {
         return;
     }
 

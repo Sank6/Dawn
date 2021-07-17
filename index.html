@@ -100,13 +100,15 @@
 
     <h2 style="font-size: unset;">Add a new activity:</h2>
     <div>
-        <p style="font-family: 'Roboto'; font-weight: 600; color: lightgray;">Points: <input type="number"></p>
-        <p style="font-family: 'Roboto'; font-weight: 600; color: lightgray;">Message: <input type="text"></p>
-        <button onclick="addActivity(this)">Add</button>
+        <p style="font-family: 'Roboto'; font-weight: 600; color: lightgray; display: flex; align-items: center;">
+            Points: <input class="add-input" type="number">
+        </p>
+        <p style="font-family: 'Roboto'; font-weight: 600; color: lightgray; display: flex; align-items: center;">
+            Message: <input class="add-input" type="text">
+        </p>
+        <button class="add-button" onclick="addActivity(this)">Add</button>
     </div>
 
-    <br>
-    <br>
 
     <div id="menubar">
         <div>

@@ -22,6 +22,33 @@ h2 {
     color: #E9E9E9;
 }
 
+.add-input {
+    height: .9cm;
+    border: 1.5px solid hsla(0,0%,100%,.05);
+    border-radius: 5px;
+    color: #fff;
+    font-size: inherit;
+    background-color: rgba(0, 0, 0, 0.33);
+    cursor: text !important;
+    outline: none;
+    border-radius: 7px;
+    padding-right: 10px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.add-button {
+    width: auto;
+    padding: 12px 40px;
+    border-radius: 5px;
+    background-color: #06a94d;
+    border: none;
+    color: #fff;
+    font-size: large;
+    margin: 0 0 0 auto;
+    display: block;
+}
+
 .edit {
     width: 20px;
     float: right;
@@ -271,18 +298,6 @@ input[type="text"] {
     display: inline-block;
     vertical-align: middle;
     border: 0;
-}
-
-input[type="number"] {
-    height: .9cm;
-    min-width: 50px;
-    padding: 0 5px;
-    background-color: var(--primary-colour);
-    box-shadow: inset 0 0 0 1000px rgb(255 255 255 / 10%);
-    border: 1.5px solid hsla(0,0%,100%,.05);
-    border-radius: 5px;
-    color: #fff;
-    font-size: inherit;
 }
 
 .calendar-container {
