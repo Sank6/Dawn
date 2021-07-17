@@ -312,6 +312,6 @@ input[type="text"] {
     color: #3C3844;
 }
 .disabled {
-    color: #7A7585;
+    color: #c7c7c7;
     cursor: not-allowed;
 }
