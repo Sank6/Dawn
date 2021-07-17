@@ -150,10 +150,6 @@ img {
     vertical-align: middle;
 }
 
-.settings-page {
-    width: calc(100% - 25px)
-}
-
 .notifications {
     background-image: url("assets/notifications.png");
 }
@@ -173,8 +169,11 @@ img {
     position: relative;
     float: right;
     margin-right: 10px;
-    width: 45px;
     height: 34px;
+}
+
+.slider {
+    width: 60px;
 }
 
 .switch input { 
@@ -263,7 +262,6 @@ input[type="text"] {
     background-color: #686464;
     border-radius: 10px;
     padding-bottom: 15px;
-    width: calc(100% - 20px);
 }
 
 .xs-icon img {
