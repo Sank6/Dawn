@@ -10,7 +10,14 @@ function toggleActivity(self, points){
 
 function edit(id) {
     let label = findLableForControl(document.getElementById(id));
-    label.contentEditable == "true" ? label.contentEditable == "false" : label.contentEditable = "true";
+    if (label.contentEditable == "true") {
+        label.contentEditable = "false";
+        label.classList.remove("editable")
+    } else {
+        label.contentEditable = "true";
+        label.focus()
+        label.classList.add("editable")
+    }
 }
 
 function findLableForControl(el) {
