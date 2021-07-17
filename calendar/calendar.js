@@ -107,8 +107,30 @@ function loadClickHandlers() {
                 let tasks = document.getElementsByClassName("task");
                 for (let task of tasks) {
                     task.checked = Math.random() < 0.75;
+                    if (task.checked) {
+                        let t = task.nextElementSibling.firstElementChild.innerText
+                        t = trimChar(t)
+                        task.nextElementSibling.firstElementChild.innerText = "+"+ t
+                    } else {
+                        let t = task.nextElementSibling.firstElementChild.innerText
+                        t = trimChar(t)
+                        task.nextElementSibling.firstElementChild.innerText = t
+                    }
                 }
             }
         }
     }
+}
+
+
+function trimChar(string, charToRemove) {
+    while(string.charAt(0)==charToRemove) {
+        string = string.substring(1);
+    }
+
+    while(string.charAt(string.length-1)==charToRemove) {
+        string = string.substring(0,string.length-1);
+    }
+
+    return string;
 }
