@@ -22,14 +22,14 @@ function edit(id, elem) {
         setEndOfContenteditable(span)
         span.onclick = () => { return false; }
         span.classList.add("editable")
-        span.on("keydown", (e) => {
+        span.onkeydown = (e) => {
             if (e.keyCode == 13) {
                 span.contentEditable = "false";
                 span.onclick = () => { return true; }
                 span.classList.remove("editable")
                 elem.src = "/assets/edit.png"
             }
-        })
+        }
         elem.src = "/assets/tick.png"
     }
 }
