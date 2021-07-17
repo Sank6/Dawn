@@ -17,6 +17,7 @@ function edit(id, elem) {
         span.classList.remove("editable")
         elem.src = "/assets/edit.png"
     } else {
+        let initialText = span.innerText;
         span.contentEditable = "true";
         span.focus()
         setEndOfContenteditable(span)
@@ -30,6 +31,12 @@ function edit(id, elem) {
                 elem.src = "/assets/edit.png"
             }
         }
+        document.removeEventListener('click')
+        document.addEventListener('click', function(event) {
+            if (!span.contains(event.target) && !elem.contains(event.target)) 
+                span.innerText = initialText;
+        });
+
         elem.src = "/assets/tick.png"
     }
 }

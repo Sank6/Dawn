@@ -32,9 +32,11 @@ h2 {
 }
 
 .editable {
-    background-color: rgba(255, 255, 255, 0.33);
+    background-color: rgba(0, 0, 0, 0.33);
     cursor: text !important;
     outline: none;
+    border-radius: 7px;
+    padding-right: 10px;
 }
 
 .streak {
@@ -88,6 +90,7 @@ label {
 label > span {
     padding: 5px;
     margin-left: 7px;
+    outline: none;
 }
 
 .container {
