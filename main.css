@@ -100,9 +100,9 @@ img {
     position: fixed;
     background-color: #24293C;
     padding: 5px 0 10px 0;
-    width: 100%;
+    width: 414px;
     height: 50px;
-    left: 0;
+    left: calc(50%-207px);
     bottom: 0;
 }
 
@@ -249,11 +249,9 @@ input[type="text"] {
 
 .calendar-container {
     margin-top: 30px;
-    width: 370px;
-    /* height: 356px; */
     background-color: #686464;
     border-radius: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .xs-icon img {
