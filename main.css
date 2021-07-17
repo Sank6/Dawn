@@ -95,6 +95,7 @@ label > span {
     white-space: nowrap;
     display: inline-block;
     overflow: hidden;
+    vertical-align: middle;
 }
 
 .container {
