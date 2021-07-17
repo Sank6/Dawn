@@ -347,7 +347,8 @@ input[type="text"] {
 }
 
 
-.add-input {
+
+input[type="text"].add-input, input[type="number"].add-input {
     height: .9cm;
     border: 1.5px solid hsla(0,0%,100%,.05);
     border-radius: 5px;
@@ -374,4 +375,5 @@ input[type="text"] {
     font-size: large;
     margin: 0 0 0 auto;
     display: block;
+    cursor: pointer;
 }
