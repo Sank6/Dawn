@@ -7,9 +7,10 @@ body {
     margin: 60px auto 65px auto;
     padding: 0 10px;
     max-height: 896px;
-    width: 394px;
+    max-width: 394px;
     overflow-x: hidden;
     user-select: none;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -78,8 +79,7 @@ label {
 }
 
 img {
-    width: 370px;
-    height: 291px;
+    width: 100%;
 }
 
 .points {
@@ -93,8 +93,7 @@ img {
 }
 
 .checklist {
-    max-height: 350px;
-    overflow-y: auto;
+    
 }
 
 .small {
@@ -253,10 +252,11 @@ input[type="text"] {
 }
 
 .calendar-container {
-    margin-top: 30px;
+    margin: 30px auto 0 auto;
     background-color: #686464;
     border-radius: 10px;
-    padding-bottom: 15px;
+    width: min-content;
+    padding: 10px;
 }
 
 .xs-icon img {
