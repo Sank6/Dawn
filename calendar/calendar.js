@@ -53,8 +53,9 @@ function loadCalendarPage(month, year) {
             let el = document.createElement("div")
             el.id = new Date(lastYear, (12+(calendarMonth-1)) % 12, daysInLastMonth - firstDate + i).getTime()
             el.classList.add("day", "disabled")
-            if (new Date(lastYear, (12+(calendarMonth-1)) % 12, i).getTime() < d.getTime()) {
+            if (new Date(lastYear, (12+(calendarMonth-1)) % 12, daysInLastMonth - firstDate + i).getTime() < d.getTime()) {
                 el.style.backgroundColor = `rgba(255, ${parseInt(Math.random()*255)}, 0, 0.3)`
+            } else {
                 el.classList.add("future")
             }
             el.innerText = daysInLastMonth - firstDate + i
