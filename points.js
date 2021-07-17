@@ -1,4 +1,5 @@
 const pointsCounter = document.getElementById("current-points")
+let currentActivities = 0
 
 function toggleActivity(self, points) {
     if (self.checked) {
@@ -71,7 +72,8 @@ function addActivity(self) {
     let points = self.parentElement.firstElementChild.firstElementChild.value
     let message = self.parentElement.children[1].firstElementChild.value
 
-    if (points == "" || points < 0 || message == "") {
+    if (points == "" || points < 1 || message == "") {
+        alert("Invalid input!")
         return;
     }
 
@@ -79,6 +81,19 @@ function addActivity(self) {
 }
 
 function renderActivity(points, message) {
-    console.log(points)
-    console.log(message)
+    currentActivities += 1
+
+    let el = document.createElement("div")
+    el.classList.add("container")
+    el.innerHTML = `
+        <input type="checkbox" name="sample-${currentActivities}" id="sample-${currentActivities}" value="sample-${currentActivities}" class="task" onclick="toggleActivity(this, ${points})">
+        <label for="sample-${currentActivities}">
+            <div class="checkbox">
+                <span class="points">+${points}</span>
+            </div>
+            <span>${message}</span>
+        </label>
+        <img class="edit" src="/assets/edit.png" onclick="edit('sample-${currentActivities}', this)">
+    `
+    document.getElementById("checklist").appendChild(el)
 }

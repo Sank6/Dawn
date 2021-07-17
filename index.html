@@ -21,17 +21,19 @@
     <img src="/assets/chill-vibes.png">
     <h1>Check off your day!</h1>
     <h3>You have earnt <span id="current-points" class="streak">0</span> points so far</h3>
-    <div class="checklist">
+    <div id="checklist" class="checklist">
+        
         <div class="container">
-            <input type="checkbox" name="sample-1" id="sample-1" value="sample-1" class="task" onclick="toggleActivity(this, 10)">           
+            <input type="checkbox" name="sample-1" id="sample-1" value="sample-1" class="task" onclick="toggleActivity(this, 10)">
             <label for="sample-1">
                 <div class="checkbox">
                     <span class="points">+10</span>
                 </div>
                 <span>Get out of bed</span>
             </label>
-            <img class="edit" src="/assets/edit.png" onclick="edit('sample-1', this)">
+            <img class="edit" src="/assets/edit.png" onclick="edit(this)">
         </div>
+
         <div class="container">
             <input type="checkbox" name="sample-2" id="sample-2" value="sample-2" class="task" onclick="toggleActivity(this, 5)">
             <label for="sample-2">
@@ -98,7 +100,7 @@
 
     <br>
 
-    <h2 style="font-size: unset;">Add a new activity:</h2>
+    <h2 style="font-size: x-large;">Add a new activity:</h2>
     <div>
         <p style="font-family: 'Roboto'; font-weight: 600; color: lightgray; display: flex; align-items: center;">
             Points: <input class="add-input" type="number">
