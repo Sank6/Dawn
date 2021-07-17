@@ -14,3 +14,13 @@ $(document).ready(function() {
         return false;
     });
 });
+
+
+toggleStreaks(self) {
+    let el = document.getElementById("points-for-steak")
+    if (self.checked) {
+        el.style.display = "block"
+    } else {
+        el.style.display = "none"
+    }
+}

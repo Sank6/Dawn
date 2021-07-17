@@ -34,15 +34,15 @@
             <div class="sm-icon streaks"></div>
             <span class="text">Enable Streaks</span>
             <label class="switch">
-                <input type="checkbox" class="toggle" checked>
+                <input type="checkbox" class="toggle" checked onclick="toggleStreaks(this)">
                 <span class="slider"></span>
             </label>
         </div>
-        <div class="container">
+        <div class="container" id="points-for-steak">
             <div class="sm-icon streaks"></div>
             <span class="text">Points for streaks</span>
             <div class="number">
-                <span class="minus">-</span><input type="text" value="1"/><span class="plus">+</span>
+                <span class="minus">-</span><input type="text" value="30"/><span class="plus">+</span>
             </div>
         </div>
     </div>
