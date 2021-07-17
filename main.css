@@ -122,8 +122,8 @@ img {
 
 .home {
     position: absolute;
-    width: 53px;
-    height: 53px;
+    width: 25px;
+    height: 27px;
     left: 179px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
