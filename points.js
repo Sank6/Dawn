@@ -17,6 +17,9 @@ function edit(id) {
     } else {
         label.contentEditable = "true";
         label.focus()
+        let text = label.innerText;
+        label.innerText = "";
+        label.innerText = text;
         label.onclick = () => {return false;}
         label.classList.add("editable")
     }
