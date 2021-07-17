@@ -32,6 +32,7 @@ h2 {
 
 .editable {
     background-color: rgba(255, 255, 255, 0.33);
+    cursor: text !important;
 }
 
 .streak {
@@ -77,7 +78,7 @@ label {
     font-weight: 500;
     font-size: 24px;
     vertical-align: middle;
-    cursor: text;
+    cursor: pointer;
     margin-left: -50px;
     padding-left: 60px;
     z-index: 2;
