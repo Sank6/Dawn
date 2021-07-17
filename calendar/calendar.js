@@ -1,4 +1,6 @@
 const d = new Date()
+let calendarMonth = d.getMonth()
+let calendarYear = d.getFullYear()
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ]
@@ -13,29 +15,46 @@ function firstDateOfMonth(month, year) {
 
 onPageLoad()
 function onPageLoad() {
-    loadCalendarPage(d.getMonth(), d.getYear())
+    loadCalendarPage(calendarMonth, calendarYear)
 }
 
 
 
+function scrollForwardMonth() {
+    calendarMonth = (12+(calendarMonth+1)) % 12
+    calendarYear = calendarYear + (calendarMonth == 11 ? 1 : 0)
+    loadCalendarPage(calendarMonth, calendarYear)
+}
+
+function scrollBackMonth() {
+    calendarMonth = (12+(calendarMonth-1)) % 12
+    calendarYear = calendarYear - (calendarMonth == 0 ? 1 : 0)
+    loadCalendarPage(calendarMonth, calendarYear)
+}
+
+
 function loadCalendarPage(month, year) {
-    let monthName = monthNames[d.getMonth()]
+    let monthName = monthNames[calendarMonth]
     let el = document.getElementById("month-name")
-    el.innerText = monthName + " " + d.getFullYear()
+    el.innerText = monthName + " " + calendarYear
 
     let calendar = document.getElementById("calendar-section")
 
-    let daysInThisMonth = daysInMonth(d.getMonth(), d.getFullYear())
-    let firstDate = firstDateOfMonth(d.getMonth(), d.getFullYear())
+    children = Array.prototype.slice.call(calendar.children).splice(7, 1000)
+    children.forEach(child => child.remove())
+
+    let daysInThisMonth = daysInMonth(calendarMonth, calendarYear)
+    let firstDate = firstDateOfMonth(calendarMonth, calendarYear)
     
     if (firstDate != 0) {
-        let lastYear = d.getFullYear() - (d.getMonth() == 0 ? 1 : 0)
-        let daysInLastMonth = daysInMonth((12+(d.getMonth()-1)) % 12, lastYear)
+        let lastYear = calendarYear - (calendarMonth == 0 ? 1 : 0)
+        let daysInLastMonth = daysInMonth((12+(calendarMonth-1)) % 12, lastYear)
         for (let i=0; i < firstDate; i++) {
             let el = document.createElement("div")
+            el.id = new Date(lastYear, (12+(calendarMonth-1)) % 12, i).getTime()
             el.classList.add("day", "disabled")
-            if (new Date(lastYear, (12+(d.getMonth()-1)) % 12, i).getTime() < d.getTime()) {
-                el.style.backgroundColor = `rgb(255, ${parseInt(Math.random()*255)}, 0)`
+            if (new Date(lastYear, (12+(calendarMonth-1)) % 12, i).getTime() < d.getTime()) {
+                el.style.backgroundColor = `rgba(255, ${parseInt(Math.random()*255)}, 0, 0.3)`
                 el.classList.add("future")
             }
             el.innerText = daysInLastMonth - firstDate + i
@@ -46,20 +65,22 @@ function loadCalendarPage(month, year) {
     for (let i=0; i < daysInThisMonth; i++) {
         let el = document.createElement("div")
         el.classList.add("day")
-        if (new Date(d.getFullYear(), d.getMonth(), i).getTime() < d.getTime()) {
+        el.id = new Date(calendarYear, calendarMonth, i).getTime()
+        if (new Date(calendarYear, calendarMonth, i).getTime() < d.getTime()) {
             el.style.backgroundColor = `rgb(255, ${parseInt(Math.random()*255)}, 0)`
         }
         el.innerText = i
         calendar.appendChild(el)
     }
 
-    let nextYear = d.getFullYear() + (d.getMonth() == 11 ? 1 : 0)
-    let daysInNextMonth = daysInMonth((12+(d.getMonth()+1)) % 12, nextYear)
+    let nextYear = calendarYear + (calendarMonth == 11 ? 1 : 0)
+    let daysInNextMonth = daysInMonth((12+(calendarMonth+1)) % 12, nextYear)
     let daysInNextMonthToAdd = 7*5 - daysInThisMonth - firstDate
     for (let i=0; i < daysInNextMonthToAdd; i++) {
         let el = document.createElement("div")
+        el.id = new Date(nextYear, (12+(calendarMonth+1)) % 12, i).getTime()
         el.classList.add("day")
-        if (new Date(nextYear, (12+(d.getMonth()+1)) % 12, i).getTime() > d.getTime()) {
+        if (new Date(nextYear, (12+(calendarMonth+1)) % 12, i).getTime() > d.getTime()) {
             el.classList.add("future")
         } else {
             el.classList.add("disabled")
@@ -67,5 +88,24 @@ function loadCalendarPage(month, year) {
         }
         el.innerText = i
         calendar.appendChild(el)
+    }
+    loadClickHandlers()
+}
+
+function loadClickHandlers() {
+    let days = document.getElementsByClassName("day");
+    for(let day of days) {
+        day.onclick = function () {
+            let date = new Date(day.id);
+            if (date.getTime() > d.getTime()) {
+                return;
+            } else {
+                console.log(date.toLocaleDateString())
+                let tasks = document.getElementsByClassName("tasks");
+                for (let task of tasks) {
+                    task.checked = Math.random() < 0.75;
+                }
+            }
+        }
     }
 }
