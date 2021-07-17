@@ -8,7 +8,7 @@ function daysInMonth(month, year) {
 }
 
 function firstDateOfMonth(month, year) {
-    new Date(year, month, 0).getDay()
+    return new Date(year, month, 0).getDay();
 }
 
 onPageLoad()
@@ -31,6 +31,7 @@ function loadCalendarPage(month, year) {
     if (firstDate != 0) {
         let lastYear = d.getFullYear() - (d.getMonth() == 0 ? 1 : 0)
         let daysInLastMonth = daysInMonth((12+(d.getMonth()-1)) % 12, lastYear)
+        console.log(firstDate)
         for (let i=0; i += 1; i < firstDate) {
             console.log("ok")
             let el = document.createElement("div")
