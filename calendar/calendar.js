@@ -28,7 +28,7 @@ function scrollForwardMonth() {
 
 function scrollBackMonth() {
     calendarMonth = (12+(calendarMonth-1)) % 12
-    calendarYear = calendarYear - (calendarMonth == 0 ? 1 : 0)
+    calendarYear = calendarYear - (calendarMonth == 11 ? 1 : 0)
     loadCalendarPage(calendarMonth, calendarYear)
 }
 
@@ -69,7 +69,7 @@ function loadCalendarPage(month, year) {
         if (new Date(calendarYear, calendarMonth, i).getTime() < d.getTime()) {
             el.style.backgroundColor = `rgb(255, ${parseInt(Math.random()*255)}, 0)`
         }
-        el.innerText = i
+        el.innerText = i + 1
         calendar.appendChild(el)
     }
 
@@ -86,7 +86,7 @@ function loadCalendarPage(month, year) {
             el.classList.add("disabled")
             el.style.backgroundColor = `rgb(255, ${parseInt(Math.random()*255)}, 0)`
         }
-        el.innerText = i
+        el.innerText = i + 1
         calendar.appendChild(el)
     }
     loadClickHandlers()
@@ -100,8 +100,8 @@ function loadClickHandlers() {
             if (date.getTime() > d.getTime()) {
                 return;
             } else {
-                document.getElementById("selected-date").innerText = date.toLocaleDateString();
-                let tasks = document.getElementsByClassName("tasks");
+                document.getElementById("selected-date").innerText = date.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+                let tasks = document.getElementsByClassName("task");
                 for (let task of tasks) {
                     task.checked = Math.random() < 0.75;
                 }
