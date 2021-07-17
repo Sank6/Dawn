@@ -8,19 +8,21 @@ function toggleActivity(self, points) {
     }
 }
 
-function edit(id) {
+function edit(id, elem) {
     let label = findLableForControl(document.getElementById(id));
     let span = label.childNodes[3];
     if (span.contentEditable == "true") {
         span.contentEditable = "false";
         span.onclick = () => { return true; }
         span.classList.remove("editable")
+        elem.src = "/assets/edit.png"
     } else {
         span.contentEditable = "true";
         span.focus()
         setEndOfContenteditable(span)
         span.onclick = () => { return false; }
         span.classList.add("editable")
+        elem.src = "/assets/tick.png"
     }
 }
 

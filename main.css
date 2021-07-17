@@ -84,6 +84,10 @@ label {
     position: relative;
     outline: none;
 }
+label > span {
+    padding: 5px;
+    margin-left: 7px;
+}
 
 .container {
     margin: 10px 0;
