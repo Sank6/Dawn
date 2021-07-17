@@ -93,7 +93,8 @@ function loadCalendarPage(month, year) {
 
     children = Array.prototype.slice.call(calendar.children).splice(7, 1000)
     children.forEach(child => {
-        if (isColourLight(child.style.backgroundColor)) {
+        let bg = window.getComputedStyle(child, null).getPropertyValue("background-color")
+        if (isColourLight(bg)) {
             child.style.color = "black"
         }
     })
