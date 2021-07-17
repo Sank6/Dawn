@@ -26,21 +26,23 @@ function toggleStreaks(self) {
 }
 
 function notifications() {
-    if (window.Notification && Notification.permission === "granted") {
-        new Notification("Reminder", {
-            icon: "/assets/icons/512x512.png",
-            body: "Notifications are enabled"
-        });
-    } else if (window.Notification && Notification.permission !== "denied") {
-        Notification.requestPermission(function (permission) {
-            if (permission === "granted") {
-                new Notification("Reminder", {
-                    icon: "/assets/icons/512x512.png",
-                    body: "Notifications are enabled"
-                });
-            } else {
-                document.getElementById("notifications-checkbox").checked = false;
-            }
-        });
+    if (document.getElementById("notifications-checkbox").checked) {
+        if (window.Notification && Notification.permission === "granted") {
+            new Notification("Reminder", {
+                icon: "/assets/icons/512x512.png",
+                body: "Notifications are enabled"
+            });
+        } else if (window.Notification && Notification.permission !== "denied") {
+            Notification.requestPermission(function (permission) {
+                if (permission === "granted") {
+                    new Notification("Reminder", {
+                        icon: "/assets/icons/512x512.png",
+                        body: "Notifications are enabled"
+                    });
+                } else {
+                    document.getElementById("notifications-checkbox").checked = false;
+                }
+            });
+        }
     }
 }
