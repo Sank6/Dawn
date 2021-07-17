@@ -100,6 +100,8 @@ function loadClickHandlers() {
             let date = new Date(parseInt(day.id));
             if (date.getTime() > d.getTime()) {
                 return;
+            } else if (day.classList.contains("disabled")) {
+                return;
             } else {
                 document.getElementById("selected-date").innerText = date.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
                 let tasks = document.getElementsByClassName("task");
