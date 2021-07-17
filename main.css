@@ -91,6 +91,7 @@ label > span {
     padding: 5px;
     margin-left: 7px;
     outline: none;
+    max-width: 290px;
 }
 
 .container {
