@@ -17,18 +17,6 @@ function edit(id, elem) {
         span.classList.remove("editable")
         elem.src = "/assets/edit.png"
     } else {
-        let initialText = span.innerText;
-        
-        document.removeEventListener('click', () => {})
-        document.addEventListener('click', function(event) {
-            if (!span.contains(event.target) && !elem.contains(event.target)) 
-                span.innerText = initialText;
-                span.contentEditable = "false";
-                span.onclick = () => { return true; }
-                span.classList.remove("editable")
-                elem.src = "/assets/edit.png"
-        });
-
         span.contentEditable = "true";
         span.focus()
         setEndOfContenteditable(span)
