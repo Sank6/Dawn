@@ -250,9 +250,10 @@ input[type="text"] {
 .calendar-container {
     margin-top: 30px;
     width: 370px;
-    height: 356px;
+    /* height: 356px; */
     background-color: #686464;
     border-radius: 10px;
+    padding-bottom: 10px;
 }
 
 .xs-icon img {
@@ -276,7 +277,7 @@ input[type="text"] {
 .month-header {
     font-size: 24px;
     font-weight: 700;
-    margin: 0 80px;
+    margin: 0 10px;
 }
 
 .calendar-section {

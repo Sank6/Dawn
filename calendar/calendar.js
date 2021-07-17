@@ -96,11 +96,11 @@ function loadClickHandlers() {
     let days = document.getElementsByClassName("day");
     for(let day of days) {
         day.onclick = function () {
-            let date = new Date(day.id);
+            let date = new Date(parseInt(day.id));
             if (date.getTime() > d.getTime()) {
                 return;
             } else {
-                console.log(date.toLocaleDateString())
+                document.getElementById("selected-date").innerText = date.toLocaleDateString())
                 let tasks = document.getElementsByClassName("tasks");
                 for (let task of tasks) {
                     task.checked = Math.random() < 0.75;
