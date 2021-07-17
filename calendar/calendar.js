@@ -13,18 +13,15 @@ function firstDateOfMonth(month, year) {
 
 onPageLoad()
 function onPageLoad() {
-    loadCalendarPage(d.getMonth(), d.getYear())    
+    loadCalendarPage(d.getMonth(), d.getYear())
 }
 
 
 
 function loadCalendarPage(month, year) {
-    let monthName =  monthNames[d.getMonth()]
-    console.log(monthName)
+    let monthName = monthNames[d.getMonth()]
     let el = document.getElementById("month-name")
-    console.log(el)
     el.innerText = monthName + " " + d.getFullYear()
-    console.log(el)
 
     let calendar = document.getElementById("calendar-section")
 
