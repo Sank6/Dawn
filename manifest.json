@@ -34,7 +34,7 @@
             "icons": [{ "src": "/assets/calendar.png", "sizes": "192x192" }]
         }
     ],
-    "description": "Manage your daily goals",
+    "description": "A minimalist mobile app that aims to assist young people struggling with mental health issues in maintaining a consistent daily routine, providing positive feedback in the form of points and streaks.",
     "screenshots": [
       {
         "src": "/images/screenshots/home.png",
