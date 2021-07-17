@@ -13,4 +13,7 @@ $(document).ready(function() {
         $input.change();
         return false;
     });
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+    }
 });
