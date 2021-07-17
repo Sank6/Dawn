@@ -22,32 +22,7 @@ h2 {
     color: #E9E9E9;
 }
 
-.add-input {
-    height: .9cm;
-    border: 1.5px solid hsla(0,0%,100%,.05);
-    border-radius: 5px;
-    color: #fff;
-    font-size: inherit;
-    background-color: rgba(0, 0, 0, 0.33);
-    cursor: text !important;
-    outline: none;
-    border-radius: 7px;
-    padding-right: 10px;
-    flex-grow: 1;
-    text-align: left;
-}
 
-.add-button {
-    width: auto;
-    padding: 12px 40px;
-    border-radius: 5px;
-    background-color: #06a94d;
-    border: none;
-    color: #fff;
-    font-size: large;
-    margin: 0 0 0 auto;
-    display: block;
-}
 
 .edit {
     width: 20px;
@@ -369,4 +344,34 @@ input[type="text"] {
 .disabled {
     color: #c7c7c7;
     cursor: not-allowed;
+}
+
+
+.add-input {
+    height: .9cm;
+    border: 1.5px solid hsla(0,0%,100%,.05);
+    border-radius: 5px;
+    color: #fff;
+    font-size: inherit;
+    background-color: rgba(0, 0, 0, 0.33);
+    cursor: text !important;
+    outline: none;
+    border-radius: 7px;
+    padding-right: 10px;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.add-button {
+    width: auto;
+    padding: 12px 40px;
+    border-radius: 5px;
+    background-color: #06a94d;
+    border: none;
+    color: #fff;
+    font-size: large;
+    margin: 0 0 0 auto;
+    display: block;
 }
