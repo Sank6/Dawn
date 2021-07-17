@@ -10,7 +10,7 @@
     <meta name="description" content="A minimalist mobile app that aims to assist young people struggling with mental health issues in maintaining a consistent daily routine, providing positive feedback in the form of points and streaks.">
     <meta property="og:image" content="/assets/icons/512x512.png">
     <meta name="theme-color" content="#24293C">
-    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/png" href="/assets/icons/192x192.png">
     <script src="/main.js"></script>
@@ -27,21 +27,24 @@
             <div class="checkbox">
                 <span class="points">+10</span>
             </div>
-            <label for="sample-1" contenteditable="true">Get out of bed</label>
+            <label for="sample-1">Get out of bed</label>
+            <img class="edit" src="assets/edit.png" onclick="edit('sample-1')">
         </div>
         <div class="container">
             <input type="checkbox" name="sample-2" id="sample-2" value="sample-2" class="task" checked onclick="toggleActivity(this, 5)">
             <div class="checkbox">
                 <span class="points">+5</span>
             </div>
-            <label for="sample-2" contenteditable="true">Make bed</label>
+            <label for="sample-2">Make bed</label>
+            <img class="edit" src="/assets/edit.png" onclick="edit('sample-2')">
         </div>
         <div class="container">
             <input type="checkbox" name="sample-3" id="sample-3" value="sample-3" class="task" onclick="toggleActivity(this, 10)">
             <div class="checkbox">
                 <span class="points">+10</span>
             </div>
-            <label for="sample-3" contenteditable="true">Brush teeth</label>
+            <label for="sample-3">Brush teeth</label>
+            <img class="edit" src="/assets/edit.png" onclick="edit('sample-3')">
             <br>
         </div>
         <div class="container">
@@ -49,21 +52,24 @@
             <div class="checkbox">
                 <span class="points">+15</span>
             </div>
-            <label for="sample-4" contenteditable="true">Shower</label>
+            <label for="sample-4" contenteditable="false">Shower</label>
+            <img class="edit" src="/assets/edit.png" onclick="edit('sample-4')">
         </div>
         <div>
             <input type="checkbox" name="sample-5" id="sample-5" value="sample-5" class="task" onclick="toggleActivity(this, 10)">
             <div class="checkbox">
                 <span class="points">+10</span>
             </div>
-            <label for="sample-5" contenteditable="true">Have breakfast</label>
+            <label for="sample-5">Have breakfast</label>
+            <img class="edit" src="/assets/edit.png" onclick="edit('sample-5')">
         </div>
         <div class="container">
             <input type="checkbox" name="sample-6" id="sample-6" value="sample-6" class="task" onclick="toggleActivity(this, 10)">
             <div class="checkbox">
                 <span class="points">+10</span>
             </div>
-            <label for="sample-6" contenteditable="true">Message a friend</label>
+            <label for="sample-6">Message a friend</label>
+            <img class="edit" src="/assets/edit.png" onclick="edit('sample-6')">
         </div>
     </div>
 

@@ -23,6 +23,13 @@ h2 {
     color: #E9E9E9;
 }
 
+.edit {
+    width: 20px;
+    float: right;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
 .streak {
     color: #F6A730;
     font-weight: 900;
@@ -66,8 +73,7 @@ label {
     font-weight: 500;
     font-size: 24px;
     vertical-align: middle;
-    cursor:pointer;
-
+    cursor: text;
     margin-left: -50px;
     padding-left: 60px;
     z-index: 2;
