@@ -32,7 +32,7 @@ function loadCalendarPage(month, year) {
         let lastYear = d.getFullYear() - (d.getMonth() == 0 ? 1 : 0)
         let daysInLastMonth = daysInMonth((12+(d.getMonth()-1)) % 12, lastYear)
         console.log(firstDate)
-        for (let i=0; i += 1; i < firstDate) {
+        for (let i=0; i < firstDate; i++) {
             console.log("ok")
             let el = document.createElement("div")
             el.classList.add("day", "disabled")
@@ -44,7 +44,7 @@ function loadCalendarPage(month, year) {
         }
     }
 
-    for (let i=0; i += 1; i < daysInThisMonth) {
+    for (let i=0; i < daysInThisMonth; i++) {
         console.log("ok2")
         let el = document.createElement("div")
         el.classList.add("day")
@@ -58,7 +58,7 @@ function loadCalendarPage(month, year) {
     let nextYear = d.getFullYear() + (d.getMonth() == 11 ? 1 : 0)
     let daysInNextMonth = daysInMonth((12+(d.getMonth()+1)) % 12, nextYear)
     let daysInNextMonthToAdd = 7*5 - daysInThisMonth - firstDate
-    for (let i=0; i += 1; i < daysInNextMonthToAdd) {
+    for (let i=0; i < daysInNextMonthToAdd; i++) {
         console.log("ok3")
         let el = document.createElement("div")
         el.classList.add("day")
