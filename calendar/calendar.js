@@ -108,13 +108,13 @@ function loadClickHandlers() {
                 for (let task of tasks) {
                     task.checked = Math.random() < 0.75;
                     if (task.checked) {
-                        let t = task.nextElementSibling.firstElementChild.innerText
+                        let t = task.nextElementSibling.firstElementChild.nextElementSibling.innerText
                         t = trimChar(t, "+")
-                        task.nextElementSibling.firstElementChild.innerText = "+"+ t
+                        task.nextElementSibling.firstElementChild.nextElementSibling.innerText = "+"+ t
                     } else {
-                        let t = task.nextElementSibling.firstElementChild.innerText
+                        let t = task.nextElementSibling.firstElementChild.nextElementSibling.innerText
                         t = trimChar(t, "+")
-                        task.nextElementSibling.firstElementChild.innerText = t
+                        task.nextElementSibling.firstElementChild.nextElementSibling.innerText = t
                     }
                 }
             }
