@@ -13,29 +13,29 @@
     <link rel="stylesheet" type="text/css" href="/main.css">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/png" href="/assets/icons/192x192.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/main.js"></script>
+    <script src="calendar.js"></script>
     <title>Dawn</title>
 </head>
-<body>
+<body onload="onReady()">
     <h1>Calendar</h1>
     <h2>Your current streak is <span class="streak">5</span> days</h2>
     <div class="calendar-container">
         <div class="month">
             <div class="left xs-icon"><img src="/assets/left.png"></div>
-            <div class="month-header">July 2021</div>
+            <div id="month-name" class="month-header">July 2021</div>
             <div class="right xs-icon"><img src="/assets/right.png"></div>
         </div>
         <div class="dates">
-            <div class="calendar-section">
-                <span class="day-name">Sun</span>
+            <div class="calendar-section" id="calendar-section">
                 <span class="day-name">Mon</span>
                 <span class="day-name">Tue</span>
                 <span class="day-name">Wed</span>
                 <span class="day-name">Thu</span>
                 <span class="day-name">Fri</span>
                 <span class="day-name">Sat</span>
-                <div style="background-color: rgba(255, 180, 100, 0.5)" class="day disabled">28</div>
+                <span class="day-name">Sun</span>
+                <!-- <div style="background-color: rgba(255, 180, 100, 0.5)" class="day disabled">28</div>
                 <div style="background-color: rgba(255, 230, 100, 0.5)" class="day disabled">29</div>
                 <div style="background-color: rgba(255, 209, 100, 0.5)" class="day disabled">30</div>
                 <div style="background-color: rgb(255, 201, 50)" class="day">1</div>
@@ -69,7 +69,7 @@
                 <div class="day future">29</div>
                 <div class="day future">30</div>
                 <div class="day future">31</div>
-                <div class="day future disabled">1</div>
+                <div class="day future disabled">1</div> -->
         </div>
     </div>
     <br><br><br>
