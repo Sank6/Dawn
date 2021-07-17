@@ -1,5 +1,12 @@
 const pointsCounter = document.getElementById("current-points")
 let currentActivities = 0
+renderActivity(10, "Get out of bed")
+renderActivity(5, "Make bed")
+renderActivity(10, "Brush teeth")
+renderActivity(15, "Shower")
+renderActivity(15, "Get dressed")
+renderActivity(10, "Have breakfast")
+renderActivity(10, "Message a friend")
 
 function toggleActivity(self, points) {
     if (self.checked) {
@@ -14,6 +21,9 @@ function edit(id, elem) {
     let span = label.childNodes[3];
     if (span.contentEditable == "true") {
         if (span.innerText == "") {
+            if (label.previousElementSibling.checked) {
+                pointsCounter.innerText = parseInt(pointsCounter.innerText) - parseInt(label.firstElementChild.firstElementChild.innerHTML.substring(1))
+            }
             span.parentElement.parentElement.remove()
         }
         span.contentEditable = "false";
@@ -29,6 +39,9 @@ function edit(id, elem) {
         span.onkeydown = (e) => {
             if (e.keyCode == 13) {
                 if (span.innerText == "") {
+                    if (label.previousElementSibling.checked) {
+                        pointsCounter.innerText = parseInt(pointsCounter.innerText) - parseInt(label.firstElementChild.firstElementChild.innerHTML.substring(1))
+                    }
                     span.parentElement.parentElement.remove()
                 }
                 span.contentEditable = "false";
