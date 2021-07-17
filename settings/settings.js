@@ -27,14 +27,14 @@ function toggleStreaks(self) {
 
 function notifications() {
     if (window.Notification && Notification.permission === "granted") {
-        new Notification("Notification", {
+        new Notification("Reminder", {
             icon: "/assets/icons/512x512.png",
             body: "Notifications are enabled"
         });
     } else if (window.Notification && Notification.permission !== "denied") {
         Notification.requestPermission(function (permission) {
             if (permission === "granted") {
-                new Notification("Notification", {
+                new Notification("Reminder", {
                     icon: "/assets/icons/512x512.png",
                     body: "Notifications are enabled"
                 });
