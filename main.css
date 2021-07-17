@@ -61,7 +61,6 @@ input[type="checkbox"]:checked ~ .checkbox .points {
 }
 
 label {
-    padding-left: 16px;
     display: inline-block;
     font-weight: 500;
     font-size: 24px;
@@ -69,7 +68,7 @@ label {
     cursor:pointer;
 
     margin-left: -40px;
-    padding-left: 40px;
+    padding-left: 50px;
     z-index: 2;
     position: relative;
 }
