@@ -118,8 +118,6 @@ img {
 
 #menubar {
     position: fixed;
-    display: flex;
-    justify-content: space-around;
     background-color: #24293C;
     padding: 10px 50px;
     width: 100%;
@@ -128,6 +126,11 @@ img {
     left: -50px;
     box-shadow: 0 -20px 15px #24293c;
     z-index: 3;
+}
+#menubar > div {
+    max-width: 394px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .settings {
