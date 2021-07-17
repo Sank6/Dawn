@@ -85,7 +85,7 @@ function loadCalendarPage(month, year) {
             el.classList.add("future")
         } else {
             el.classList.add("disabled")
-            el.style.backgroundColor = `rgb(255, ${parseInt(Math.random()*255)}, 0)`
+            el.style.backgroundColor = `rgba(255, ${parseInt(Math.random()*255)}, 0, 0.3)`
         }
         el.innerText = i + 1
         calendar.appendChild(el)
