@@ -31,7 +31,7 @@ function edit(id, elem) {
                 elem.src = "/assets/edit.png"
             }
         }
-        document.removeEventListener('click')
+        document.removeEventListener('click', () => {})
         document.addEventListener('click', function(event) {
             if (!span.contains(event.target) && !elem.contains(event.target)) 
                 span.innerText = initialText;
