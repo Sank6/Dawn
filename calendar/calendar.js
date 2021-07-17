@@ -62,14 +62,14 @@ function loadCalendarPage(month, year) {
         }
     }
 
-    for (let i=0; i < daysInThisMonth; i++) {
+    for (let i=1; i < daysInThisMonth+1; i++) {
         let el = document.createElement("div")
         el.classList.add("day")
         el.id = new Date(calendarYear, calendarMonth, i).getTime()
         if (new Date(calendarYear, calendarMonth, i).getTime() < d.getTime()) {
             el.style.backgroundColor = `rgb(255, ${parseInt(Math.random()*255)}, 0)`
         }
-        el.innerText = i + 1
+        el.innerText = i
         calendar.appendChild(el)
     }
 
