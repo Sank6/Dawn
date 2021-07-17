@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../main.js"></script>
+    <title>Dawn</title>
+</head>
+<body>
+    <h1>Settings</h1>
+
+    <div class="settings-page">
+        <div class="container">
+            <div class="sm-icon notifications"></div>
+            <span class="text">Enable notifications</span>
+            <label class="switch">
+                <input type="checkbox" class="toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="container">
+            <div class="sm-icon streaks"></div>
+            <span class="text">Enable Streaks</span>
+            <label class="switch">
+                <input type="checkbox" class="toggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="container">
+            <div class="sm-icon streaks"></div>
+            <span class="text">Points for streaks</span>
+            <div class="number">
+                <span class="minus">-</span><input type="text" value="1"/><span class="plus">+</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="menubar">
+        <a class="icon" href="../calendar">
+            <img class="calendar" src="../assets/calendar.png">
+        </a>
+        <a class="icon" href="../">
+            <img class="home" src="../assets/home.png">
+        </a>
+        <a class="icon" href="#">
+            <img class="settings" src="../assets/settings.png">
+        </a>
+    </div>
+</body>
+</html>
