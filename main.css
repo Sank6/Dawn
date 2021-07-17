@@ -79,9 +79,7 @@ label {
     font-size: 24px;
     vertical-align: middle;
     cursor: pointer;
-    margin-left: -50px;
-    padding-left: 60px;
-    z-index: 2;
+    z-index: 4;
     position: relative;
     outline: none;
 }
