@@ -327,6 +327,7 @@ input[type="text"] {
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
+    font-weight: 600;
 }
 .day-name {
     font-size: 10px;
