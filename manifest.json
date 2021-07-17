@@ -1,0 +1,50 @@
+{
+    "short_name": "Dawn",
+    "name": "Dawn",
+    "icons": [
+      {
+        "src": "/assets/icons/192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/assets/icons/512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#24293C",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#24293C",
+    "shortcuts": [
+        {
+          "name": "Check off your tasks",
+          "short_name": "Home",
+          "description": "Finish your tasks for the day.",
+          "url": "/",
+          "icons": [{ "src": "/assets/home.png", "sizes": "192x192" }]
+        },
+        {
+            "name": "View your calendar",
+            "short_name": "Calendar",
+            "description": "Track your progress",
+            "url": "/calendar",
+            "icons": [{ "src": "/assets/calendar.png", "sizes": "192x192" }]
+        }
+    ],
+    "description": "Manage your daily goals",
+    "screenshots": [
+      {
+        "src": "/images/screenshots/home.png",
+        "type": "image/png",
+        "sizes": "414x896"
+      },
+      {
+        "src": "/images/screenshots/calendar.png",
+        "type": "image/jpg",
+        "sizes": "414x896"
+      }
+    ]
+  }
