@@ -115,8 +115,8 @@ function renderActivity(points, message) {
             </div>
             <span>${message}</span>
         </label>
+        <img class="edit" src="/assets/bin.png" onclick="bin('sample-${currentActivities}')">
         <img class="edit" src="/assets/edit.png" onclick="edit('sample-${currentActivities}', this)">
-        <img class="bin" src="/assets/bin.png" onclick="bin('sample-${currentActivities}')">
     `
     document.getElementById("checklist").appendChild(el)
 }
