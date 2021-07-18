@@ -85,6 +85,9 @@ function addActivity(self) {
     let points = self.parentElement.firstElementChild.firstElementChild.value
     let message = self.parentElement.children[1].firstElementChild.value
 
+    self.parentElement.firstElementChild.firstElementChild.value = ""
+    self.parentElement.children[1].firstElementChild.value = ""
+
     if (points == "" || points < 1 || message == "") {
         alert("Invalid input!")
         return;
