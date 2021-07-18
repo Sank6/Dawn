@@ -16,15 +16,21 @@ function toggleActivity(self, points) {
     }
 }
 
+function bin(id) {
+    let label = findLableForControl(document.getElementById(id));
+    let span = label.childNodes[3];
+    if (label.previousElementSibling.checked) {
+        pointsCounter.innerText = parseInt(pointsCounter.innerText) - parseInt(label.firstElementChild.firstElementChild.innerHTML.substring(1))
+    }
+    span.parentElement.parentElement.remove()
+}
+
 function edit(id, elem) {
     let label = findLableForControl(document.getElementById(id));
     let span = label.childNodes[3];
     if (span.contentEditable == "true") {
         if (span.innerText == "") {
-            if (label.previousElementSibling.checked) {
-                pointsCounter.innerText = parseInt(pointsCounter.innerText) - parseInt(label.firstElementChild.firstElementChild.innerHTML.substring(1))
-            }
-            span.parentElement.parentElement.remove()
+            bin(id)
         }
         span.contentEditable = "false";
         span.onclick = () => { return true; }
@@ -110,6 +116,7 @@ function renderActivity(points, message) {
             <span>${message}</span>
         </label>
         <img class="edit" src="/assets/edit.png" onclick="edit('sample-${currentActivities}', this)">
+        <img class="bin" src="/assets/bin.png" onclick="bin('sample-${currentActivities}')">
     `
     document.getElementById("checklist").appendChild(el)
 }

@@ -24,6 +24,7 @@ self.addEventListener('install', (event) => {
         '/assets/chill-vibes.png',
         '/assets/calendar.png',
         '/assets/calendar-bold.png',
+        '/assets/bin.png',
         '/assets/icons/192x192.png',
         '/assets/icons/512x512.png',
         '/assets/screenshots/home.png',
