@@ -126,7 +126,7 @@ img {
     padding: 10px 50px;
     width: 100%;
     height: 50px;
-    bottom: 0;
+    bottom: -2px;
     left: -50px;
     box-shadow: 0 -20px 15px #24293c;
     z-index: 3;
